@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Gastos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="caja">
+    <header class="header-box">
+      <div class="logo-box">
+        <img src="logo.png" alt="Logo B10">
+      </div>
+      <h1>Control de Gastos</h1>
+    </header>
+
+    <section class="resumen">
+      <div class="saldo-principal">
+        <span>Balance total</span>
+        <strong id="balance">$0.00</strong>
+      </div>
+      <div class="totales">
+        <div class="tarjeta-total">
+          <span><i class="fa-solid fa-arrow-trend-up"></i> Ingresos</span>
+          <strong id="total-ingresos">$0.00</strong>
+        </div>
+        <div class="tarjeta-total">
+          <span><i class="fa-solid fa-arrow-trend-down"></i> Gastos</span>
+          <strong id="total-gastos" class="texto-gasto">$0.00</strong>
+        </div>
+      </div>
+    </section>
+
+    <form id="form">
+      <input type="text" id="concepto" placeholder="Concepto (ej. Pago, Comida)" required>
+      <div class="fila-inputs">
+        <input type="number" id="monto" placeholder="Monto" step="0.01" min="0.01" required>
+        <select id="tipo">
+          <option value="ingreso">Ingreso (+)</option>
+          <option value="gasto">Gasto (-)</option>
+        </select>
+        <button type="submit" aria-label="Agregar"><i class="fa-solid fa-plus"></i></button>
+      </div>
+    </form>
+
+    <ul id="lista"></ul>
+
+    <footer class="footer-info">
+      <p class="author"><strong>Creador:</strong> Rodrigo Santini</p>
+      <p class="career">Estudiante de Ingeniería de Software</p>
+      <p class="social">
+        <strong>Instagram:</strong> 
+        <a href="https://instagram.com/ronits.ss" target="_blank" rel="noopener noreferrer">@ronits.ss</a>
+      </p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
